@@ -1,0 +1,25 @@
+﻿@page
+@model EmployeeLoginApp.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Employee.Email"></label>
+        <input asp-for="Employee.Email" />
+        <span asp-validation-for="Employee.Email"></span>
+    </div>
+    <div>
+        <label asp-for="Employee.Password"></label>
+        <input type="password" asp-for="Employee.Password" />
+        <span asp-validation-for="Employee.Password"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
